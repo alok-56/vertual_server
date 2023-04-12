@@ -2,6 +2,7 @@ const express = require('express');
 const app = express()
 const bodyparser=require('body-parser')
 require('./Database/config')
+const port = process.env.PORT || 4500;
 
 
 app.use(bodyparser.urlencoded({extended:false}))
@@ -19,6 +20,6 @@ app.use('/doctor',doctor)
 
 
 //-------------port-------------
-app.listen(4500, () => {
+app.listen(port, () => {
     console.log("app is running on port", 4500)
 })
