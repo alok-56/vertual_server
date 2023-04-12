@@ -9,6 +9,7 @@ const singlebookambulance = require('../controller/user/Getsigleambulancebook')
 const bookverification = require('../controller/user/Bookemail')
 const Allambulcebook = require('../controller/user/Getallambulancebook')
 const Alldoctorbook = require('../controller/user/Getallapoinmentbook')
+const geet = require('../controller/user/get')
 
 
 const route = express.Router()
@@ -23,5 +24,6 @@ route.get('/book/ambu/:id', singlebookambulance);
 route.post('/book/notify', bookverification)
 route.get('/book/allambulance', Allambulcebook);
 route.get('/book/alldoctor', Alldoctorbook);
+route.get('/', geet)
 
 module.exports = route;
