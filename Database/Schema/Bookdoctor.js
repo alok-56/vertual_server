@@ -11,6 +11,10 @@ const bookdoctorschema = new mongoose.Schema({
     docname: String,
     Hostpitalnumber: String,
     Problem: String,
+    deasease: String,
+    medicine: String,
+    test: String,
+    des: String,
     status: String
 })
 

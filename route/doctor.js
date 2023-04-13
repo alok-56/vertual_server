@@ -6,6 +6,7 @@ const getpatient = require('../controller/doctor/Getpatientambulace');
 const getapoinment = require('../controller/doctor/Getampoinement');
 const getall = require('../controller/doctor/getalldoctor');
 const singledoctor = require('../controller/doctor/singledoctor');
+const Updatedoctorbook = require('../controller/doctor/updatebook');
 
 
 const route = express.Router();
@@ -17,6 +18,7 @@ route.get('/book/ambulance/:id', getpatient);
 route.get('/book/apoinment/:id', getapoinment);
 route.get('/allhos', getall);
 route.get('/single/:id', singledoctor);
+route.put('/book/update', Updatedoctorbook);
 
 
 module.exports = route;
