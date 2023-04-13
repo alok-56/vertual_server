@@ -22,8 +22,8 @@ route.post('/amb', Bookambulance)
 route.get('/book/doc/:id', singlebookdoctor);
 route.get('/book/ambu/:id', singlebookambulance);
 route.post('/book/notify', bookverification)
-route.get('/book/allambulance', Allambulcebook);
-route.get('/book/alldoctor', Alldoctorbook);
+route.get('/book/allambulance/:id', Allambulcebook);
+route.get('/book/alldoctor/:id', Alldoctorbook);
 
 
 module.exports = route;
