@@ -9,6 +9,7 @@ const singlebookambulance = require('../controller/user/Getsigleambulancebook')
 const bookverification = require('../controller/user/Bookemail')
 const Allambulcebook = require('../controller/user/Getallambulancebook')
 const Alldoctorbook = require('../controller/user/Getallapoinmentbook')
+const getsingle = require('../controller/user/Getsinglebookid')
 
 
 
@@ -24,6 +25,7 @@ route.get('/book/ambu/:id', singlebookambulance);
 route.post('/book/notify', bookverification)
 route.get('/book/allambulance/:id', Allambulcebook);
 route.get('/book/alldoctor/:id', Alldoctorbook);
+route.get('/book/doctor/:id',getsingle)
 
 
 module.exports = route;
