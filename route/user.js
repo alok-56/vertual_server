@@ -10,6 +10,9 @@ const bookverification = require('../controller/user/Bookemail')
 const Allambulcebook = require('../controller/user/Getallambulancebook')
 const Alldoctorbook = require('../controller/user/Getallapoinmentbook')
 const getsingle = require('../controller/user/Getsinglebookid')
+const postsymphtom = require('../controller/user/Postsymptoms')
+const getsympthon = require('../controller/user/getsympthom')
+
 
 
 
@@ -25,7 +28,9 @@ route.get('/book/ambu/:id', singlebookambulance);
 route.post('/book/notify', bookverification)
 route.get('/book/allambulance/:id', Allambulcebook);
 route.get('/book/alldoctor/:id', Alldoctorbook);
-route.get('/book/doctor/:id',getsingle)
+route.get('/book/doctor/:id', getsingle)
+route.post('/sympthom', postsymphtom)
+route.get('/search/:key',getsympthon);
 
 
 module.exports = route;
