@@ -14,8 +14,8 @@ const bookambulanceschema = new mongoose.Schema({
     status:String,
     patientlat:String,
     patientlog:String,
-    hospitallat:String,
-    Hospitallong:String
+    lat:String,
+    lon:String
 })
 
 const bookambulancemodel = mongoose.model('ambulancebook', bookambulanceschema);
