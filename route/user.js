@@ -12,6 +12,7 @@ const Alldoctorbook = require('../controller/user/Getallapoinmentbook')
 const getsingle = require('../controller/user/Getsinglebookid')
 const postsymphtom = require('../controller/user/Postsymptoms')
 const getsympthon = require('../controller/user/getsympthom')
+const bookemail = require('../controller/user/book')
 
 
 
@@ -31,6 +32,7 @@ route.get('/book/alldoctor/:id', Alldoctorbook);
 route.get('/book/doctor/:id', getsingle)
 route.post('/sympthom', postsymphtom)
 route.get('/search/:key',getsympthon);
+route.post('/book/notify',bookemail)
 
 
 module.exports = route;
