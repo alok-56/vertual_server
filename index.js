@@ -1,25 +1,27 @@
 const express = require('express');
 const app = express()
-const bodyparser=require('body-parser')
+const bodyparser = require('body-parser')
 require('./Database/config')
 const port = process.env.PORT || 4500;
 
-const book=require('./controller/user/Bookemail')
+const book = require('./controller/user/Bookemail')
 book()
 
 
-app.use(bodyparser.urlencoded({extended:false}))
-app.use(bodyparser.json()) 
+app.use(bodyparser.urlencoded({ extended: false }))
+app.use(bodyparser.json())
 
 
 
 //--------router---------------
 const user = require('./route/user')
-const doctor=require('./route/doctor')
+const doctor = require('./route/doctor')
+const waste = require('./route/waste')
 
 //---------route-------------
-app.use('/user',user)
-app.use('/doctor',doctor)
+app.use('/user', user)
+app.use('/doctor', doctor)
+app.use('/waste', waste)
 
 
 //-------------port-------------
