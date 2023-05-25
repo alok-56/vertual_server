@@ -1,7 +1,6 @@
 const nodemailer = require('nodemailer')
 
 const bookverification = async (req, res) => {
-    let Email = req.body.email;
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -11,9 +10,9 @@ const bookverification = async (req, res) => {
     })
     const mailOptions = {
         from: "easypeasy11746@gmail.com",
-        to: Email,
+        to: "dosti1166@gmail.com",
         subject: "Your otp is",
-        text: `Hello sir your booking is sucessfully done`
+        html: '<h1>Hello!</h1><p>This is an HTML email.</p>'
     }
     transport.sendMail(mailOptions, (err, info) => {
         if (err) {
@@ -25,6 +24,7 @@ const bookverification = async (req, res) => {
     })
 
 }
+
 
 
 module.exports = bookverification;

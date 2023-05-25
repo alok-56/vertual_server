@@ -7,5 +7,5 @@ const symptoms = new moongoose.Schema({
 
 
 })
-const symptomsmodel = moongoose.model('symptom', symptoms);
+const symptomsmodel = moongoose.model('sympotoms', symptoms);
 module.exports = symptomsmodel;
